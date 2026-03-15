@@ -1,3 +1,3 @@
 ﻿using MasterMemory;
 
-[assembly: MasterMemoryGeneratorOptions(Namespace = "AndanteTribe.MasterSystem.Sample")]
+[assembly: MasterMemoryGeneratorOptions(Namespace = "MasterSystem.Sample")]

@@ -1,5 +1,4 @@
-﻿using GameKernel;
-using Localization;
+﻿using AndanteTribe.Utils.GameServices;
 using MessagePack;
 
 [assembly: MessagePackAssumedFormattable(typeof(MasterId<>))]

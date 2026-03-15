@@ -1,6 +1,6 @@
-﻿using GameKernel;
+using AndanteTribe.Utils;
+using AndanteTribe.Utils.GameServices;
 using MasterMemory;
-using MasterSystem.Abstractions;
 using MasterSystem.Sample.Enums;
 using MessagePack;
 

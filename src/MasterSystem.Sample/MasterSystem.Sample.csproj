@@ -9,13 +9,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="AndanteTribe.Backport" Version="1.0.0" />
-      <PackageReference Include="AndanteTribe.GameKernel" Version="1.0.0" />
-      <PackageReference Include="AndanteTribe.Localization" Version="1.0.1" />
       <PackageReference Include="MasterMemory" Version="3.0.4" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MasterSystem.Abstractions\MasterSystem.Abstractions.csproj" />
+      <ProjectReference Include="..\Utils.GameServices\Utils.GameServices.csproj" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+      <ProjectReference Include="..\Utils.BackPort\Utils.BackPort.csproj" />
     </ItemGroup>
 </Project>
