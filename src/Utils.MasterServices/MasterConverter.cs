@@ -3,10 +3,12 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using System.Security.Cryptography;
-using AndanteTribe.Utils.GameServices;
-using AndanteTribe.Utils.GameServices.MessagePack;
+using GameKernel;
+using Localization;
+using Localization.MessagePack;
 using MasterMemory;
 using MasterMemory.Meta;
+using MasterSystem.Abstractions;
 using MessagePack;
 using MessagePack.Formatters;
 using MessagePack.Resolvers;
@@ -71,8 +73,8 @@ public static class MasterConverter
     private static DatabaseBuilderBase LoadCore(MasterSettings settings)
     {
         var resolver = settings.CustomResolver == null
-            ? CompositeResolver.Create(GameServiceResolver.Shared, MessagePackSerializer.DefaultOptions.Resolver)
-            : CompositeResolver.Create(settings.CustomResolver, GameServiceResolver.Shared, MessagePackSerializer.DefaultOptions.Resolver);
+            ? CompositeResolver.Create(GameKernel.MessagePack.GameKernelResolver.Shared, LocalizationResolver.Shared, MessagePackSerializer.DefaultOptions.Resolver)
+            : CompositeResolver.Create(settings.CustomResolver, GameKernel.MessagePack.GameKernelResolver.Shared, LocalizationResolver.Shared, MessagePackSerializer.DefaultOptions.Resolver);
         var builder = (DatabaseBuilderBase)Activator.CreateInstance(settings.BuilderType, resolver);
         var actions = new List<Action>();
         var container = new ConcurrentBag<(Type, IList<object>)>();
@@ -144,7 +146,7 @@ public static class MasterConverter
     internal class CollectAllCharactersResolver(IFormatterResolver innerResolver, HashSet<char> hashset) : IFormatterResolver, IMessagePackFormatter<string?>, IMessagePackFormatter<LocalizeFormat?>
     {
         private readonly object _lock = new();
-        private readonly IMessagePackFormatter<LocalizeFormat?> _localizeFormatter = GameServiceResolver.Shared.GetFormatter<LocalizeFormat?>()!;
+        private readonly IMessagePackFormatter<LocalizeFormat?> _localizeFormatter = LocalizationResolver.Shared.GetFormatter<LocalizeFormat?>()!;
 
         public IMessagePackFormatter<T>? GetFormatter<T>()
         {

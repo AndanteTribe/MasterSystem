@@ -24,7 +24,7 @@
     </PropertyGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' != 'net6.0'">
-        <ProjectReference Include="..\Utils.BackPort\Utils.BackPort.csproj" />
+        <PackageReference Include="AndanteTribe.Backport" Version="1.0.0" />
     </ItemGroup>
 
 </Project>

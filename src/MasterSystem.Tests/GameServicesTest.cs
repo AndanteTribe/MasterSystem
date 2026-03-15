@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using AndanteTribe.Utils.GameServices;
+using GameKernel;
 using NUnit.Framework;
 
 namespace AndanteTribe.Utils.Tests

@@ -4,10 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
-using AndanteTribe.Utils.GameServices;
-using AndanteTribe.Utils.GameServices.MessagePack;
 using AndanteTribe.Utils.MasterSample;
 using AndanteTribe.Utils.MasterServices;
+using GameKernel;
+using GameKernel.MessagePack;
+using Localization.MessagePack;
 using MasterSystem.Sample;
 using MasterSystem.Sample.Enums;
 using MasterSystem.Sample.Units;
@@ -20,7 +21,7 @@ namespace AndanteTribe.Utils.Tests
     public class MasterServicesTest
     {
         private static readonly IFormatterResolver s_resolver = CompositeResolver.Create(
-            GameServiceResolver.Shared, MasterSampleResolver.Instance, StandardResolver.Instance);
+            GameKernelResolver.Shared, LocalizationResolver.Shared, MasterSampleResolver.Instance, StandardResolver.Instance);
 
         private const uint MaxLanguageCount = 2;
         private static readonly MasterSettings[] s_testCases =

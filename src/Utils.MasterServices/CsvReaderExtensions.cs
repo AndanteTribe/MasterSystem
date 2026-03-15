@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using AndanteTribe.Utils.Csv;
-using AndanteTribe.Utils.GameServices;
+using GameKernel;
 using MessagePack;
 
 namespace AndanteTribe.Utils.MasterServices;

@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using AndanteTribe.Utils.Csv;
-using AndanteTribe.Utils.GameServices;
+using Localization;
 
 namespace AndanteTribe.Utils.MasterServices;
 

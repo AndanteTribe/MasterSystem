@@ -1,6 +1,7 @@
-using AndanteTribe.Utils;
-using AndanteTribe.Utils.GameServices;
+﻿using GameKernel;
+using Localization;
 using MasterMemory;
+using MasterSystem.Abstractions;
 using MasterSystem.Sample.Enums;
 using MasterSystem.Sample.Units;
 using MasterSystem.Sample.Utils;
