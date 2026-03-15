@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.1;net6.0;net8.0</TargetFrameworks>
+        <LangVersion>14</LangVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <OutputType>Library</OutputType>
+        <Version>1.0.0</Version>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+        <!-- NuGet Packaging -->
+        <PackageId>AndanteTribe.MasterSystem</PackageId>
+        <PackageVersion>$(Version)</PackageVersion>
+        <Authors>AndanteTribe</Authors>
+        <Copyright>© AndanteTribe</Copyright>
+        <Description>Master data converter for MasterSystem.</Description>
+        <PackageProjectUrl>https://github.com/AndanteTribe/MasterSystem</PackageProjectUrl>
+        <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AndanteTribe.GameKernel" Version="1.0.0" />
+      <PackageReference Include="AndanteTribe.GameKernel.MessagePack" Version="1.0.0" />
+      <PackageReference Include="AndanteTribe.Localization" Version="1.0.1" />
+      <PackageReference Include="AndanteTribe.Localization.MessagePack" Version="1.0.1" />
+      <PackageReference Include="MasterMemory" Version="3.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MasterSystem.Abstractions\MasterSystem.Abstractions.csproj" />
+    </ItemGroup>
+
+</Project>
