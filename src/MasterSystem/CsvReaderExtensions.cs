@@ -1,11 +1,10 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
-using AndanteTribe.Utils.Csv;
 using GameKernel;
 using MessagePack;
 
-namespace AndanteTribe.Utils.MasterServices;
+namespace MasterSystem;
 
 internal static class CsvReaderExtensions
 {

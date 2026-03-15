@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using GameKernel;
 using NUnit.Framework;
 
-namespace AndanteTribe.Utils.Tests
+namespace MasterSystem.Tests
 {
     public class GameServicesTest
     {

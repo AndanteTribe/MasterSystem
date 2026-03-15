@@ -1,7 +1,6 @@
 <Solution>
   <Project Path="src/MasterSystem.Abstractions/MasterSystem.Abstractions.csproj" />
+  <Project Path="src/MasterSystem/MasterSystem.csproj" />
   <Project Path="src/MasterSystem.Sample/MasterSystem.Sample.csproj" />
   <Project Path="src/MasterSystem.Tests/MasterSystem.Tests.csproj" />
-  <Project Path="src/Utils.Csv/Utils.Csv.csproj" />
-  <Project Path="src/Utils.MasterServices/Utils.MasterServices.csproj" />
 </Solution>

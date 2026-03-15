@@ -2,7 +2,7 @@
 using MasterMemory.Meta;
 using MessagePack;
 
-namespace AndanteTribe.Utils.MasterServices;
+namespace MasterSystem;
 
 /// <summary>
 /// マスターコンバート設定.

@@ -6,17 +6,17 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <OutputType>Library</OutputType>
-        <RootNamespace>AndanteTribe.Utils.MasterServices</RootNamespace>
+        <RootNamespace>MasterSystem</RootNamespace>
         <Version>1.3.0</Version>
-        <AssemblyName>Utils.MasterServices</AssemblyName>
+        <AssemblyName>MasterSystem</AssemblyName>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
         <!-- NuGet Packaging -->
-        <PackageId>AndanteTribe.Utils.MasterServices</PackageId>
+        <PackageId>AndanteTribe.MasterSystem</PackageId>
         <PackageVersion>$(Version)</PackageVersion>
         <Authors>AndanteTribe</Authors>
         <Copyright>© AndanteTribe</Copyright>
-        <Description>Utility library used across projects in AndanteTribe.</Description>
+        <Description>Master data converter for MasterSystem.</Description>
         <PackageProjectUrl>https://github.com/AndanteTribe/MasterSystem</PackageProjectUrl>
         <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
@@ -34,7 +34,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\MasterSystem.Abstractions\MasterSystem.Abstractions.csproj" />
-      <ProjectReference Include="..\Utils.Csv\Utils.Csv.csproj" />
     </ItemGroup>
 
 </Project>

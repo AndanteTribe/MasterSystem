@@ -5,10 +5,10 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using AndanteTribe.Utils.MasterSample;
-using AndanteTribe.Utils.MasterServices;
 using GameKernel;
 using GameKernel.MessagePack;
 using Localization.MessagePack;
+using MasterSystem;
 using MasterSystem.Sample;
 using MasterSystem.Sample.Enums;
 using MasterSystem.Sample.Units;
@@ -16,7 +16,7 @@ using MessagePack;
 using MessagePack.Resolvers;
 using NUnit.Framework;
 
-namespace AndanteTribe.Utils.Tests
+namespace MasterSystem.Tests
 {
     public class MasterServicesTest
     {

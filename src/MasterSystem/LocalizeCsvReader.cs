@@ -1,8 +1,7 @@
 ﻿using System.Reflection;
-using AndanteTribe.Utils.Csv;
 using Localization;
 
-namespace AndanteTribe.Utils.MasterServices;
+namespace MasterSystem;
 
 /// <summary>
 /// ローカライズ対応CSVリーダー.

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>net5.0;net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
     <LangVersion>9</LangVersion>
-    <RootNamespace>AndanteTribe.Utils.Tests</RootNamespace>
+    <RootNamespace>MasterSystem.Tests</RootNamespace>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -22,8 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MasterSystem\MasterSystem.csproj" />
     <ProjectReference Include="..\MasterSystem.Sample\MasterSystem.Sample.csproj" />
-    <ProjectReference Include="..\Utils.MasterServices\Utils.MasterServices.csproj" />
   </ItemGroup>
 
   <ItemGroup>
