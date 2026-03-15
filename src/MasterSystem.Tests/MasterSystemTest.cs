@@ -18,7 +18,7 @@ using NUnit.Framework;
 
 namespace MasterSystem.Tests
 {
-    public class MasterServicesTest
+    public class MasterSystemTest
     {
         private static readonly IFormatterResolver s_resolver = CompositeResolver.Create(
             GameKernelResolver.Shared, LocalizationResolver.Shared, MasterSampleResolver.Instance, StandardResolver.Instance);
