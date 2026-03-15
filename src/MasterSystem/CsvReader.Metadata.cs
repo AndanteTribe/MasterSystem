@@ -1,8 +1,8 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 
-namespace AndanteTribe.Utils.Csv;
+namespace MasterSystem;
 
 public partial class CsvReader
 {

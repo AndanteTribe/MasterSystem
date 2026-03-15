@@ -1,7 +1,7 @@
-﻿using System.Globalization;
+using System.Globalization;
 using System.Runtime.CompilerServices;
 
-namespace AndanteTribe.Utils.Csv;
+namespace MasterSystem;
 
 /// <summary>
 /// CSVリーダー.
