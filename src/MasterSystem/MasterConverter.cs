@@ -59,9 +59,9 @@ public static class MasterConverter
     {
         var hashset = new HashSet<char>();
         var resolver = new CollectAllCharactersResolver(MessagePackSerializerOptions.Standard.Resolver, hashset);
-        settings = settings with
+        settings = new MasterSettings(settings)
         {
-            CustomResolver = settings.CustomResolver == null ? resolver : CompositeResolver.Create(resolver, settings.CustomResolver),
+            CustomResolver = settings.CustomResolver == null ? resolver : CompositeResolver.Create(resolver, settings.CustomResolver)
         };
 
         LoadCore(settings);
@@ -119,7 +119,7 @@ public static class MasterConverter
     private static void LoadFileCore(MetaTable table, string path, uint languageIndex, uint maxLanguageCount, ConcurrentBag<(Type, IList<object>)> container)
     {
         using var stream = File.OpenRead(path);
-        using var reader = new LocalizeCsvReader(stream) { MaxLanguageCount = maxLanguageCount };
+        using var reader = new LocalizeCsvReader(stream, maxLanguageCount);
         var list = new List<object>();
 
         while (reader.ReadLine())

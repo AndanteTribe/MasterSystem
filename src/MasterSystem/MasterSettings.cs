@@ -7,7 +7,7 @@ namespace MasterSystem;
 /// <summary>
 /// マスターコンバート設定.
 /// </summary>
-public record MasterSettings
+public class MasterSettings
 {
     /// <summary>
     /// 入力ディレクトリパス.
@@ -37,7 +37,7 @@ public record MasterSettings
     /// <summary>
     /// MessagePackのカスタムフォーマッタリゾルバを指定します.
     /// </summary>
-    public IFormatterResolver? CustomResolver { get; init; }
+    public IFormatterResolver? CustomResolver { get; set; }
 
     private MasterSettings(string inputDirectoryPath, MetaDatabase metadata, Type builderType, IFormatterResolver? customResolver)
     {
@@ -55,6 +55,20 @@ public record MasterSettings
         MaxLanguageCount = maxLanguageCount;
         LanguageIndex = languageIndex;
         CustomResolver = customResolver;
+    }
+
+    /// <summary>
+    /// Initialize a new instance of <see cref="MasterSettings"/> by copying another instance.
+    /// </summary>
+    /// <param name="settings"></param>
+    public MasterSettings(MasterSettings settings)
+    {
+        InputDirectoryPath = settings.InputDirectoryPath;
+        Metadata = settings.Metadata;
+        BuilderType = settings.BuilderType;
+        MaxLanguageCount = settings.MaxLanguageCount;
+        LanguageIndex = settings.LanguageIndex;
+        CustomResolver = settings.CustomResolver;
     }
 
     /// <summary>

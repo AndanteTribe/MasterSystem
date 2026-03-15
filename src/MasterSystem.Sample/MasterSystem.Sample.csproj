@@ -13,6 +13,7 @@
       <PackageReference Include="AndanteTribe.GameKernel" Version="1.0.0" />
       <PackageReference Include="AndanteTribe.Localization" Version="1.0.1" />
       <PackageReference Include="MasterMemory" Version="3.0.4" />
+      <PackageReference Include="MasterMemory.Annotations" Version="3.0.4" />
     </ItemGroup>
 
     <ItemGroup>

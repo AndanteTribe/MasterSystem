@@ -14,22 +14,26 @@ public class LocalizeCsvReader : CsvReader
     /// <summary>
     /// 最大言語数.
     /// </summary>
-    public uint MaxLanguageCount { get; init; } = 1;
+    public readonly uint MaxLanguageCount;
 
     /// <summary>
     /// Initialize a new instance of <see cref="LocalizeCsvReader"/>.
     /// </summary>
     /// <param name="stream"></param>
-    public LocalizeCsvReader(Stream stream) : base(stream)
+    /// <param name="maxLanguageCount"></param>
+    public LocalizeCsvReader(Stream stream, uint maxLanguageCount = 1) : base(stream)
     {
+        MaxLanguageCount  = maxLanguageCount;
     }
 
     /// <summary>
     /// Initialize a new instance of <see cref="LocalizeCsvReader"/>.
     /// </summary>
     /// <param name="reader"></param>
-    public LocalizeCsvReader(StreamReader reader) : base(reader)
+    /// <param name="maxLanguageCount"></param>
+    public LocalizeCsvReader(StreamReader reader, uint maxLanguageCount = 1) : base(reader)
     {
+        MaxLanguageCount = maxLanguageCount;
     }
 
     /// <summary>
