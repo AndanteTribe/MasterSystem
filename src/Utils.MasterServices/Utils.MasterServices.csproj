@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.1;net5.0;net6.0;net7.0;net8.0</TargetFrameworks>
+        <LangVersion>14</LangVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <OutputType>Library</OutputType>
+        <RootNamespace>AndanteTribe.Utils.MasterServices</RootNamespace>
+        <Version>1.3.0</Version>
+        <AssemblyName>Utils.MasterServices</AssemblyName>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+        <!-- NuGet Packaging -->
+        <PackageId>AndanteTribe.Utils.MasterServices</PackageId>
+        <PackageVersion>$(Version)</PackageVersion>
+        <Authors>AndanteTribe</Authors>
+        <Copyright>© AndanteTribe</Copyright>
+        <Description>Utility library used across projects in AndanteTribe.</Description>
+        <PackageProjectUrl>https://github.com/AndanteTribe/Utils</PackageProjectUrl>
+        <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MasterMemory" Version="3.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Utils.Csv\Utils.Csv.csproj" />
+      <ProjectReference Include="..\Utils.Core\Utils.Core.csproj" />
+      <ProjectReference Include="..\Utils.GameServices.MessagePack\Utils.GameServices.MessagePack.csproj" />
+      <ProjectReference Include="..\Utils.GameServices\Utils.GameServices.csproj" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' != 'net7.0' AND '$(TargetFramework)' != 'net8.0'">
+        <ProjectReference Include="..\Utils.BackPort\Utils.BackPort.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.1;net5.0;</TargetFrameworks>
+        <LangVersion>14</LangVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AndanteTribe.Backport" Version="1.0.0" />
+      <PackageReference Include="AndanteTribe.GameKernel" Version="1.0.0" />
+      <PackageReference Include="AndanteTribe.Localization" Version="1.0.1" />
+      <PackageReference Include="MasterMemory" Version="3.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MasterSystem.Abstractions\MasterSystem.Abstractions.csproj" />
+    </ItemGroup>
+</Project>
