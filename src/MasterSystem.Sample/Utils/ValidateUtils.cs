@@ -1,4 +1,4 @@
-﻿using System.Runtime.CompilerServices;
+using System.Runtime.CompilerServices;
 using MasterSystem.Sample.Units;
 
 namespace MasterSystem.Sample.Utils;

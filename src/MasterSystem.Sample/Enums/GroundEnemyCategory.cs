@@ -1,4 +1,4 @@
-﻿namespace MasterSystem.Sample.Enums;
+namespace MasterSystem.Sample.Enums;
 
 public enum GroundEnemyCategory : byte
 {

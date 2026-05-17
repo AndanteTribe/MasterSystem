@@ -1,4 +1,4 @@
-﻿using GameKernel;
+using GameKernel;
 using Localization;
 using MessagePack;
 

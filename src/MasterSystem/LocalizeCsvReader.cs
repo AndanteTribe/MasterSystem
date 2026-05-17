@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using Localization;
 
 namespace MasterSystem;
@@ -23,7 +23,7 @@ public class LocalizeCsvReader : CsvReader
     /// <param name="maxLanguageCount"></param>
     public LocalizeCsvReader(Stream stream, uint maxLanguageCount = 1) : base(stream)
     {
-        MaxLanguageCount  = maxLanguageCount;
+        MaxLanguageCount = maxLanguageCount;
     }
 
     /// <summary>
