@@ -1,4 +1,4 @@
-﻿using GameKernel;
+using GameKernel;
 using MasterMemory;
 using MasterSystem.Abstractions;
 using MasterSystem.Sample.Enums;
